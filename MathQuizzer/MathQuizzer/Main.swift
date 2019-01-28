@@ -39,7 +39,32 @@ class Main: UIViewController {
     var operation = "+"
     var userAnswer = 0
     var correctAnswer = 0
-
+    
+    //Methods to call for storyboard input
+    
+    var enterAnswer : (_ text: String) -> () = {_ in }
+    var pressCheck : () -> () = { }
+    var pressNewQuestion : () -> () = { }
+    
+    //Outlets
+    @IBOutlet weak var firstNumberLabel: UILabel!
+    @IBOutlet weak var operationLabel: UILabel!
+    @IBOutlet weak var secondNumberLabel: UILabel!
+    
+    //IBActions
+    
+    @IBAction func enterAnswer_(_ sender: UITextField) {
+        enterAnswer(sender.text ?? "0")
+    }
+    @IBAction func pressCheck_(_ sender: UIButton) {
+        pressCheck()
+    }
+    @IBAction func pressNewQuestion_(_ sender: Any) {
+        pressNewQuestion()
+    }
+    
+    //View Loading
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +73,7 @@ class Main: UIViewController {
     /* METHODS/TASKS TO BE ASSIGNED
      // CHECK GOOGLE DOCS: https://docs.google.com/spreadsheets/d/1QmvA76TZ7qybKmYNmHbCYON_RTtds1rICg212rFW6AA/edit#gid=0
      to pick an open task
+     When copying to your file - Remove the comment marks ('//') by the 'func' and '}' - if included
  */
     
      /*==============================
@@ -56,7 +82,7 @@ class Main: UIViewController {
      Return: None
      
      Description:
-        1. Create an outlet for the first number label.
+        1. Use the outlet for the first number label.
         2. Take the firstNumber variable and update the label in the storyboard
      */
      //func updateFirstNumberLabel(){
@@ -70,7 +96,7 @@ class Main: UIViewController {
      Return: None
      
      Description:
-     1. Create an outlet for the second number label.
+     1. Use the outlet for the second number label.
      2. Take the secondNumber variable and update the label in the storyboard
      */
     //func updateSecondNumberLabel(){
@@ -83,7 +109,7 @@ class Main: UIViewController {
      Return: None
      
      Description:
-     1. Create an outlet for the operation label.
+     1. Use the outlet for the operation label.
      2. Take the operation variable and update the label in the storyboard
      */
     //func updateOperationLabel(){
@@ -103,14 +129,17 @@ class Main: UIViewController {
     //}
     
     /*==============================
-     Title: Update User Answer Variable
+     Title: Update User Answer
      Input: None
      Return: None
      
      Description:
-     1. Use the storyboard to create an IBAction for the Answer Textfield
-     2. Update the userAnswer variable
+     1. This method should update the userAnswer variable
+     2. Use enterAnswer as shown below
      */
+    //enterAnswer = { (String) -> ()) in
+    
+    //}
     
     /*==============================
      Title: Calculate the Correct Answer
@@ -173,7 +202,7 @@ class Main: UIViewController {
      2. If they are same, use correctPopUp()
      3. Otherwise, use wrongPopUp
      */
-    //func checkAnswer(){
+    //pressCheck = { () -> ()) in
     
     //}
     
@@ -228,9 +257,21 @@ class Main: UIViewController {
     //func resetVariables(){
     
     //}
+    
+    /*==============================
+     Title: New Question Button
+     Input: None
+     Return: None
+     
+     Description:
+     1. Write the pressNewQustion method like shown below
+     2. call resetVariables()
+     */
+    
+    //pressNewQuestion = { () in
 
  
- 
+    //}
  
  
  

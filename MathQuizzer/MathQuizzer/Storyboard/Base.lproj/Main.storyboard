@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MathQuizzer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Main" customModule="MathQuizzer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g4-uZ-Bae">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
                                         <state key="normal" title="Check"/>
+                                        <connections>
+                                            <action selector="pressCheck_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2A-Aw-FdF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izh-Im-5jn">
                                         <rect key="frame" x="273" y="0.0" width="31" height="30"/>
                                         <state key="normal" title="New"/>
+                                        <connections>
+                                            <action selector="pressNewQuestion_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfs-G9-5qg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -86,6 +92,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="enterAnswer_:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="0GW-Kf-C0a"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -115,6 +124,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNumberLabel" destination="Ayp-HY-jVt" id="TlO-g3-lc3"/>
+                        <outlet property="operationLabel" destination="Rmh-Ez-cdo" id="P7w-oq-fSm"/>
+                        <outlet property="secondNumberLabel" destination="f5a-ml-3hQ" id="zX0-ep-MYW"/>
+                        <outlet property="userTypeAnswer" destination="H5N-I2-JFb" id="kjb-sb-0P4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
