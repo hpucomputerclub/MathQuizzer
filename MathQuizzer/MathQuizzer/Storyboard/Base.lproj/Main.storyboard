@@ -60,14 +60,18 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g4-uZ-Bae">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
-                                        <state key="normal" title="Check"/>
+                                        <state key="normal" title="Check">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="pressCheck_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2A-Aw-FdF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izh-Im-5jn">
                                         <rect key="frame" x="273" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="New"/>
+                                        <state key="normal" title="New">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="pressNewQuestion_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfs-G9-5qg"/>
                                         </connections>
@@ -105,7 +109,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.42745098039215684" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FSz-rs-bvT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ec-BX-iym"/>
                             <constraint firstItem="j6j-Dv-5SN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="EfV-H4-oEQ"/>
@@ -128,7 +132,6 @@
                         <outlet property="firstNumberLabel" destination="Ayp-HY-jVt" id="TlO-g3-lc3"/>
                         <outlet property="operationLabel" destination="Rmh-Ez-cdo" id="P7w-oq-fSm"/>
                         <outlet property="secondNumberLabel" destination="f5a-ml-3hQ" id="zX0-ep-MYW"/>
-                        <outlet property="userTypeAnswer" destination="H5N-I2-JFb" id="kjb-sb-0P4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

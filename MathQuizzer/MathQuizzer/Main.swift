@@ -51,6 +51,13 @@ class Main: UIViewController {
     @IBOutlet weak var operationLabel: UILabel!
     @IBOutlet weak var secondNumberLabel: UILabel!
     
+    //View Loading
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
     //IBActions
     
     @IBAction func enterAnswer_(_ sender: UITextField) {
@@ -63,12 +70,6 @@ class Main: UIViewController {
         pressNewQuestion()
     }
     
-    //View Loading
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
     /* METHODS/TASKS TO BE ASSIGNED
      // CHECK GOOGLE DOCS: https://docs.google.com/spreadsheets/d/1QmvA76TZ7qybKmYNmHbCYON_RTtds1rICg212rFW6AA/edit#gid=0
