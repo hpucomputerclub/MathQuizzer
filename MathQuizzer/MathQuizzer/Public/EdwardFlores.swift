@@ -21,20 +21,21 @@ extension Main{
     func resetOperation(){
         let randomNumber = rand(min:1,max:4)
         switch(randomNumber){
-            case 1:
-                operation = "+"
+        case 1:
+            operation = "+"
             break
-            case 2:
-                operation = "-"
+        case 2:
+            operation = "-"
             break
-            case 3:
-                operation = "*"
+        case 3:
+            operation = "*"
             break
-            case 4:
-                operation = "/"
+        case 4:
+            operation = "/"
             break
-            default:
+        default:
             break
         }
     }
+    
 }
