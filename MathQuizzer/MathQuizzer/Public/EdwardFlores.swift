@@ -18,4 +18,24 @@ extension Main{
         return Int.random(in: min..<max+1)
     }
     
+    func resetOperation(){
+        let randomNumber = rand(min:1,max:4)
+        switch(randomNumber){
+        case 1:
+            operation = "+"
+            break
+        case 2:
+            operation = "-"
+            break
+        case 3:
+            operation = "*"
+            break
+        case 4:
+            operation = "/"
+            break
+        default:
+            break
+        }
+    }
+    
 }
