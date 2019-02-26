@@ -20,4 +20,8 @@ extension Main{
     func wrongPopUp(){
         popUp(title: "Wrong Answer", message: "Sorry, please try again!")
     }
+    func correctPopUp(){
+        popUp(title: "Correct Answer", message: "Nice job!")
+    }
+    
 }
