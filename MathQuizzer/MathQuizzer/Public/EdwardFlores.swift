@@ -9,9 +9,13 @@
 import UIKit
 
 extension Main{
-    /*Insert Assignments In HERE*/
     
     func calcuateRightAnswer(){
         correctAnswer = firstNumber+secondNumber
     }
+    
+    func rand(min:Int, max: Int) -> Int{
+        return Int.random(in: min..<max+1)
+    }
+    
 }
