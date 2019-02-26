@@ -38,4 +38,10 @@ extension Main{
         }
     }
     
+    func resetVariables(){
+        resetOperation()
+        firstNumber = rand(min:1,max:100)
+        secondNumber = rand(min:1,max:100)
+        updateAllLabels()
+        }
 }
