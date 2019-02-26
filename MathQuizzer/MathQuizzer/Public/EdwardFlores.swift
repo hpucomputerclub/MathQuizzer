@@ -10,8 +10,8 @@ import UIKit
 
 extension Main{
     
-    func calcuateRightAnswer(){
-        correctAnswer = firstNumber+secondNumber
+    func calculateRightAnswer(){
+        correctAnswer = firstNumber operation secondNumber
     }
     
     func rand(min:Int, max: Int) -> Int{
