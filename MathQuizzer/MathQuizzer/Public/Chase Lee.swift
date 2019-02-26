@@ -24,4 +24,13 @@ extension Main{
         popUp(title: "Correct Answer", message: "Nice job!")
     }
     
+//    pressCheck = { () -> ()) in
+//        if correctAnswer == userAnswer {
+//            correctPopUp()
+//        }
+//        else {
+//            wrongPopUp()
+//        }
+//    }
+
 }
