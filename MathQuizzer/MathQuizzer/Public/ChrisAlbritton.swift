@@ -35,4 +35,16 @@ extension Main{
 func updateSecondNumberLabel(){
     secondNumberLabel.text = "\(secondNumber)"
 }
+    /*==============================
+     Title: Update Label for Operation
+     Input: None
+     Return: None
+     
+     Description:
+     1. Use the outlet for the operation label.
+     2. Take the operation variable and update the label in the storyboard
+     */
+    func updateOperationLabel(){
+        operationLabel.text = "\(operation)"
+    }
 }
