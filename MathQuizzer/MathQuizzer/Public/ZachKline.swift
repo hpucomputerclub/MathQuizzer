@@ -22,7 +22,7 @@ extension Main{
      3. Present the alert
     */
     
-    func correctAlert(title: String,message: String){
+    func popUp(title: String,message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
