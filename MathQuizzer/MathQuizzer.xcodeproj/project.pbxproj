@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8707A722267F4800D0317D /* EdwardFlores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8707A422267F4800D0317D /* EdwardFlores.swift */; };
+		0A8707A822267F4800D0317D /* ChrisAlbritton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8707A522267F4800D0317D /* ChrisAlbritton.swift */; };
+		0A8707A922267F4800D0317D /* Chase Lee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8707A622267F4800D0317D /* Chase Lee.swift */; };
 		0AC1852721FEB54100871A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC1852621FEB54100871A17 /* AppDelegate.swift */; };
 		0AC1852921FEB54100871A17 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC1852821FEB54100871A17 /* Main.swift */; };
 		0AC1852C21FEB54100871A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC1852A21FEB54100871A17 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A8707A422267F4800D0317D /* EdwardFlores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdwardFlores.swift; sourceTree = "<group>"; };
+		0A8707A522267F4800D0317D /* ChrisAlbritton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChrisAlbritton.swift; sourceTree = "<group>"; };
+		0A8707A622267F4800D0317D /* Chase Lee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Chase Lee.swift"; sourceTree = "<group>"; };
 		0AC1852321FEB54100871A17 /* MathQuizzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathQuizzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC1852621FEB54100871A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC1852821FEB54100871A17 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 		0AC1853821FEB56D00871A17 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				0A8707A622267F4800D0317D /* Chase Lee.swift */,
+				0A8707A522267F4800D0317D /* ChrisAlbritton.swift */,
+				0A8707A422267F4800D0317D /* EdwardFlores.swift */,
 				0AC1853C21FEB8E900871A17 /* Template.swift */,
 				DA8442FA21FEDF40002D7237 /* ZachKline.swift */,
 				0AC1853E21FED48200871A17 /* KevinChevalier.swift */,
@@ -169,8 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8442FB21FEDF40002D7237 /* ZachKline.swift in Sources */,
+				0A8707A822267F4800D0317D /* ChrisAlbritton.swift in Sources */,
 				0AC1853D21FEB8E900871A17 /* Template.swift in Sources */,
 				0AC1852921FEB54100871A17 /* Main.swift in Sources */,
+				0A8707A922267F4800D0317D /* Chase Lee.swift in Sources */,
+				0A8707A722267F4800D0317D /* EdwardFlores.swift in Sources */,
 				0AC1852721FEB54100871A17 /* AppDelegate.swift in Sources */,
 				0AC1853F21FED48200871A17 /* KevinChevalier.swift in Sources */,
 			);
