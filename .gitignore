@@ -4,3 +4,13 @@
 *.pbxproj
 
 *.xcuserstate
+
+Main.swift
+
+Info.plist
+
+AppDelegate.swift
+
+Main.storyboard
+
+LaunchScreen.storyboard
