@@ -81,18 +81,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Duo-ke-9YF">
                                 <rect key="frame" x="37.5" y="348.5" width="300" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-cI-kgs">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="61.5" id="90V-tn-cfb"/>
-                                            <constraint firstAttribute="height" constant="30" id="RxA-w7-qfC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5N-I2-JFb">
-                                        <rect key="frame" x="62.5" y="0.0" width="237.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5N-I2-JFb">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -102,9 +92,6 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="eg0-cI-kgs" secondAttribute="bottom" id="GNT-gi-uZm"/>
-                                    <constraint firstItem="eg0-cI-kgs" firstAttribute="leading" secondItem="Duo-ke-9YF" secondAttribute="leading" id="hEs-6D-IrT"/>
-                                    <constraint firstItem="eg0-cI-kgs" firstAttribute="top" secondItem="Duo-ke-9YF" secondAttribute="top" id="mEh-QV-9OX"/>
                                     <constraint firstAttribute="height" constant="30" id="zC9-zi-i1d"/>
                                 </constraints>
                             </stackView>
@@ -129,6 +116,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="answerTextField" destination="H5N-I2-JFb" id="cMS-0k-k8S"/>
                         <outlet property="firstNumberLabel" destination="Ayp-HY-jVt" id="TlO-g3-lc3"/>
                         <outlet property="operationLabel" destination="Rmh-Ez-cdo" id="P7w-oq-fSm"/>
                         <outlet property="secondNumberLabel" destination="f5a-ml-3hQ" id="zX0-ep-MYW"/>

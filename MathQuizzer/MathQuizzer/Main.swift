@@ -34,63 +34,222 @@ import UIKit
 class Main: UIViewController {
     
     //VARIABLES -- stores the info for the app. Use when needed
-    var firstNumber = 0
-    var secondNumber = 0
-    var operation = "+"
+    var firstNumber = 0{
+        didSet{
+            updateFirstNumberLabel()
+        }
+    }
+    var secondNumber = 0{
+        didSet{
+            updateSecondNumberLabel()
+        }
+    }
+    var operation = "+"{
+        didSet{
+            updateOperationLabel()
+        }
+    }
     var userAnswer = 0
     var correctAnswer = 0
+    var enteredAnswer = "0"
     
-    //Methods to call for storyboard input
-    
-    var enterAnswer : (_ text: String) -> () = {_ in }
-    var pressCheck : () -> () = { }
-    var pressNewQuestion : () -> () = { }
     
     //Outlets
     @IBOutlet weak var firstNumberLabel: UILabel!
     @IBOutlet weak var operationLabel: UILabel!
     @IBOutlet weak var secondNumberLabel: UILabel!
+    @IBOutlet weak var answerTextField: UITextField!
     
     //View Loading
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetVariables()
+        
+        
+    }
+    //IBActions
+    @IBAction func enterAnswer_(_ sender: UITextField) {
+        //Tried geting answer from sender and did not work because
+        //The press check action would run before enter answer and the user
+        //Answer was always zero
+        
+        
+    }
+    @IBAction func pressCheck_(_ sender: UIButton) {
+        
+        //This parses the user answer into an int
+        glenEnterAnswer()
+        
+        //Decide which pop up to show
+        userAnswer == calcuateRightAnswer() ? (correctPopUp()) : (wrongPopUp())
+        
+        print("Answer Entered: \(userAnswer)")
+        print("Correct Answer: \(calcuateRightAnswer())")
+        
+    }
+    @IBAction func pressNewQuestion_(_ sender: Any) {
+        resetVariables()
+    }
+    
+    
+    
+    //Glen
+    func glenEnterAnswer(){
+        enteredAnswer = answerTextField.text ?? "0"
+        if let num = Int(enteredAnswer){//Int type - impossible to be nil
+            //parse was good
+            self.userAnswer = num;
+            print("Answer was parsed correctly")
+        }else{
+            //parse failed
+            print("Answer was parsed incorrectly")
+            self.popUp(title: "Error", message: "Please try again, that number is not valid.")
+        }
+        
         
     }
     
-    //IBActions
     
-    @IBAction func enterAnswer_(_ sender: UITextField) {
-        enterAnswer(sender.text ?? "0")
+    //Chase
+    func wrongPopUp(){
+        popUp(title: "Wrong Answer", message: "Sorry, please try again!")
     }
-    @IBAction func pressCheck_(_ sender: UIButton) {
-        pressCheck()
+    func correctPopUp(){
+        popUp(title: "Correct Answer", message: "Nice job!")
     }
-    @IBAction func pressNewQuestion_(_ sender: Any) {
-        pressNewQuestion()
+    
+    
+    //Chris
+    
+    func updateSecondNumberLabel(){
+        secondNumberLabel.text = "\(secondNumber)"
     }
+    func updateOperationLabel(){
+        operationLabel.text = "\(operation)"
+    }
+    
+    
+    
+    //Eddy
+    func calcuateRightAnswer() -> Int{
+        switch operation{
+        case "+":
+            correctAnswer = firstNumber + secondNumber
+            break
+        case "-":
+            correctAnswer = firstNumber - secondNumber
+            break
+        case "*":
+            correctAnswer = firstNumber * secondNumber
+            break
+        case "/":
+            correctAnswer = firstNumber / secondNumber
+            break
+        default:
+            break
+            
+        }
+        return correctAnswer
+    }
+    
+    func rand(min:Int, max: Int) -> Int{
+        return Int.random(in: min..<max+1)
+    }
+    
+    func resetOperation(){
+        let randomNumber = rand(min:1,max:4)
+        switch(randomNumber){
+        case 1:
+            operation = "+"
+            break
+        case 2:
+            operation = "-"
+            break
+        case 3:
+            operation = "*"
+            break
+        case 4:
+            operation = "/"
+            break
+        default:
+            break
+        }
+    }
+    
+    func resetVariables(){
+        resetOperation()
+        firstNumber = rand(min:1,max:100)
+        secondNumber = rand(min:1,max:100)
+        answerTextField.text = ""
+    }
+    
+    
+    
+    
+    
+    
+    //Kevin
+    func updateFirstNumberLabel(){
+        firstNumberLabel.text = "\(firstNumber)"
+    }
+    
+    
+    //Zach
+    
+    func popUp(title: String,message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    /*
+     func glenEnterAnswer(){
+     enterAnswer = { (_ text: String) in
+     
+     if let num = Int(text){//Int type - impossible to be nil
+     //parse was good
+     self.userAnswer = num;
+     }else{
+     //parse failed
+     self.popUp(title: "Error", message: "Please try again, that number is not valid.")
+     
+     }
+     
+     /*closure is where you save a method inside a variable  look at line  #45 in main for declaration of closure
+     
+     line 45: var enterAnswer: (_ text: String) -> () = {_ in }   input method (parameters) output method (return type), actual method
+     every time you access to a method of variable use the self.
+     
+     let num2 = Int(text)//Int? <- Optional type
+     print("Is num2 null: \(num2 == nil)")
+     */
+     
+     }
+     }*/
+    
+    
     
     
     /* METHODS/TASKS TO BE ASSIGNED
      // CHECK GOOGLE DOCS: https://docs.google.com/spreadsheets/d/1QmvA76TZ7qybKmYNmHbCYON_RTtds1rICg212rFW6AA/edit#gid=0
      to pick an open task
      When copying to your file - Remove the comment marks ('//') by the 'func' and '}' - if included
- */
+     */
     
-     /*==============================
+    /*==============================
      Title: Update Label for First Number
      Input: None
      Return: None
      
      Description:
-        1. Use the outlet for the first number label.
-        2. Take the firstNumber variable and update the label in the storyboard
+     1. Use the outlet for the first number label.
+     2. Take the firstNumber variable and update the label in the storyboard
      */
-     //func updateFirstNumberLabel(){
-     
-     //}
-     
-     
+    //func updateFirstNumberLabel(){
+    
+    //}
+    
+    
     /*==============================
      Title: Update Label for Second Number
      Input: None
@@ -237,7 +396,7 @@ class Main: UIViewController {
      Description:
      1. Use rand() to generate a random number between 1 to 4
      2. Assign the operation variable to the corresponding operation
-        1 -> +, 2 -> -, 3 -> *, 4 -> /
+     1 -> +, 2 -> -, 3 -> *, 4 -> /
      */
     
     //func resetOperation(){
@@ -270,27 +429,27 @@ class Main: UIViewController {
      */
     
     //pressNewQuestion = { () in
-
- 
+    
+    
     //}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
